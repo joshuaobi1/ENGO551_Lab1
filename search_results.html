@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+Search Results
+{% endblock %}
+
+{% block content %}
+<div class="search-results">
+    <h1>Search Results</h1>
+    {% if books %}
+        {% for book in books %}
+            <div>
+                <h3><a href="{{ url_for('book_page', isbn=book.isbn) }}">{{ book.title }}</a></h3>
+                <p>Author: {{ book.author }}</p>
+                <p>ISBN: {{ book.isbn }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No books found matching your search criteria.</p>
+    {% endif %}
+</div>
+{% endblock %}

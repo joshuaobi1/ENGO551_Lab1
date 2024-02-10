@@ -1,0 +1,29 @@
+<{% extends "base.html" %}
+
+{% block title %}
+{{ book.title }}
+{% endblock %}
+
+{% block content %}
+<div class="book-details">
+    <h1>{{ book.title }}</h1>
+    <p>Author: {{ book.author }}</p>
+    <p>Year: {{ book.year }}</p>
+    <p>ISBN: {{ book.isbn }}</p>
+    <h2>Reviews</h2>
+    {% for review in reviews %}
+        <p><strong>{{ review.username }}:</strong> {{ review.review }} - {{ review.rating }}/5</p>
+        
+    {% else %}
+        <p>No reviews yet.</p>
+    {% endfor %}
+    <h3>Leave a Review</h3>
+    <form action="{{ url_for('book_page', isbn=book.isbn) }}" method="POST">
+        <textarea name="review" placeholder="Your review here" required></textarea>
+        <input type="number" name="rating" min="1" max="5" placeholder="Rating (1-5)" required>
+        <button type="submit">Submit Review</button>
+    </form>
+</div>
+{% endblock %}
+
+

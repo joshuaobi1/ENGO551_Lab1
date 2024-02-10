@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home Page
+{% endblock %}
+
+{% block content %}
+<div class="home-content">
+    <h1>Home Page</h1>
+    <p>Welcome, user! What would you like to do today?</p>
+    <ul>
+        <li><a href="{{ url_for('search') }}">Search for Books</a></li>
+        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+    </ul>
+</div>
+{% endblock %}
