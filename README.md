@@ -1,6 +1,7 @@
 # ENGO551_Lab1
 
 Overview
+
 This project involved creating a that Flask web application allows users to register, log in, search for books, and leave reviews for individual books. It also includes functionality to prevent a user from submitting multiple reviews for the same book, enhancing the integrity of the review data.
 
 
