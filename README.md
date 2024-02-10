@@ -3,6 +3,7 @@
 Overview
 This project involved creating a that Flask web application allows users to register, log in, search for books, and leave reviews for individual books. It also includes functionality to prevent a user from submitting multiple reviews for the same book, enhancing the integrity of the review data.
 
+
 Project Structure
 
 application.py: The main Flask application file containing route definitions for the website. This includes routes for user registration, login, book search, and review submission.
@@ -29,7 +30,9 @@ search_results.html: Displays search results.
 
 book_page.html: Displays book details and allows users to submit reviews.
 
+
 Additional Information
+
 The project uses PostgreSQL for the database back-end.
 
 User passwords are hashed for security using Werkzeug's generate_password_hash and check_password_hash.
