@@ -1,9 +1,10 @@
 # ENGO551_Lab1
 
 Overview
-This project involved creating a Flask web application allows users to register, log in, search for books, and leave reviews for individual books. It also includes functionality to prevent a user from submitting multiple reviews for the same book, enhancing the integrity of the review data.
+This project involved creating a that Flask web application allows users to register, log in, search for books, and leave reviews for individual books. It also includes functionality to prevent a user from submitting multiple reviews for the same book, enhancing the integrity of the review data.
 
 Project Structure
+
 application.py: The main Flask application file containing route definitions for the website. This includes routes for user registration, login, book search, and review submission.
 
 requirements.txt: Lists all Python packages that need to be installed to run the application.
